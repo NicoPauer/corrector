@@ -1,7 +1,36 @@
 *
 {
- // General styles for tidy look 
+ /* General styles for tidy look */
   text-align: center;
-  margin: 0;
+/* Adjust margin for center the elements better using percentages for
+   adapt to the screen size instead of use the dangerous letter size */
+  margin-bottom: 0%;
+  margin-top: 2%;
+  margin-left: 9%;
+  margin-right: 5%;
+ /* Adjust inner spacing */
   padding: 0 auto;
+}
+
+img
+{
+  width: 50%;
+  height: 50%;
+}
+
+a
+{
+  text-decoration: none;
+}
+
+a:hover
+{
+  transition: linear 0.4s;
+  color: rgb(100, 100, 100);
+  background: rgb(55, 150, 150);
+}
+
+input[type=color]
+{
+  border-radius: 100%;
 }
