@@ -25,12 +25,23 @@ a
 
 a:hover
 {
-  transition: linear 0.4s;
-  color: rgb(100, 100, 100);
-  background: rgb(55, 150, 150);
+  transition: linear 0.38s;
+  color: rgb(242, 242, 242);
+  background: rgb(65, 150, 217);
 }
 
 input[type=color]
 {
   border-radius: 100%;
+  width: 6%;
+}
+
+button
+{
+  width: 20%;
+  margin-left: -5%;
+  margin-right: -9.5%;
+  background: rgba(0, 0, 0, 0);
+  border: 1em solid red;
+  border-radius: 5%; 
 }
