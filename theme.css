@@ -33,7 +33,7 @@ a:hover
 input[type=color]
 {
   border-radius: 100%;
-  width: 5%;
+  width: 3em;
   margin-left: 9%;
   margin-right: 5%; 
 }
