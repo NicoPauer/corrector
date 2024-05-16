@@ -6,7 +6,7 @@
    adapt to the screen size instead of use the dangerous letter size */
   margin-bottom: 0%;
   margin-top: 2%;
-  margin-left: 9%;
+  margin-left: 5%;
   margin-right: 5%;
  /* Adjust inner spacing */
   padding: 0 auto;
@@ -33,7 +33,7 @@ a:hover
 input[type=color]
 {
   border-radius: 100%;
-  width: 6%;
+  width: 20%;
 }
 
 button
@@ -41,7 +41,8 @@ button
   width: 20%;
   margin-left: -5%;
   margin-right: -9.5%;
-  background: rgba(0, 0, 0, 0);
-  border: 1em solid red;
+  background: rgba(10, 100, 200, 0.3);
+  font-size: 100%;
+  border: 0.42em solid rgb(255, 95, 95);
   border-radius: 5%; 
 }
