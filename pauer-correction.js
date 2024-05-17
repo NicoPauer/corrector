@@ -12,7 +12,7 @@ var corrector = function(start, end)
       {
         // Add values in the middle of the list
         values_interval[((values_interval.length - 1) / 2)] = value;
-        values_inertval[(((values_interval.length - 1) / 2) + 1)] = different_value; 
+        values_interval[(((values_interval.length - 1) / 2) + 1)] = different_value; 
       }
 
      this.getJSON = function(fixer)
