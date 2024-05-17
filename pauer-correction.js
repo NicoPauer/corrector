@@ -1,10 +1,10 @@
 /* Library for correction using mediation between extremes © 2024 NicoPauer
  Object to encapsule the corrector logic and data for security reasons */
 
-var corrector = function(start, end)
+var corrector = function(min, max)
 {
     /* Init JSON for be a good start point */
-      let copy = {1:1, 10:10};
+      let copy = {min_corrector:1, max_corrector:10};
     // Matize extremes values with intermediate values e.g: for 1 and -1 add zero.
       this.fixing = function (value, different_value)
       {
