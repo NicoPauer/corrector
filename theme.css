@@ -28,8 +28,8 @@ h1, h2, h3, h4, h5, h6
 footer
 {
   font-family: helvetico;
-  background: rgba(95, 95, 95, 1);
-  color: rgb(235, 170, 170);
+  background: rgba(65, 65, 65, 1);
+  color: rgb(235, 200, 200);
 }
 
 img
@@ -41,6 +41,12 @@ img
 a
 {
   text-decoration: none;
+  color: rgb(65, 150, 217);
+}
+
+a:visited
+{
+  color: rgb(242, 242, 242);
 }
 
 a:hover
