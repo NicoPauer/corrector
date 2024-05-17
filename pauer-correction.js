@@ -11,8 +11,11 @@ var corrector = function(start, end)
       this.fixing = function (value, different_value)
       {
         // Add values in the middle of the list
-        values_interval[(values_interval.length - 2)] = parseInt(value);
-        values_interval[(values_interval.length - 1)] = parseInt(different_value); 
+        values_interval[(values_interval.length / 2)] = parseInt(value);
+       // Make auxiliar copy before replace secon middle value
+        values_interval[values_interval.length - 1] = values_interval[((values_interval.length / 2) + 1)];
+      // Replace second middle value 
+        values_interval[((values_interval.length / 2) + 1)] = parseInt(different_value); 
       }
 
      this.getJSON = function(fixer)
