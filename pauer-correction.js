@@ -24,9 +24,11 @@ var corrector = function(start, end)
           for (let value in values_interval)
           {
            // Squared correction
-            copy[value] = ((values_interval * (fixer ** 2)) + (values_interval * fixer) + values_interval.indexOf(value));
+            copy[value] = ((values_interval.length * (fixer ** 2)) + (values_interval * fixer) + values_interval.indexOf(value));
           }
           return copy;
+  
       } 
- 
+     // Optimize with this
+      delete values_interval, start, end;
 };
