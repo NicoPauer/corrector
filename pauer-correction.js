@@ -6,17 +6,19 @@ var corrector = function(start, end)
     /* list that have opposite values between extremes 
         e.g [1, -1] or [1, -3, 3, -1]
         */
-      let values_interval = [start, end];
+      let values_interval = [parseInt(start), parseInt(end)];
       // Each call to the method fixing with the two new values improve precisition
       this.fixing = function (value, different_value)
       {
         // Add values in the middle of the list
-        values_interval[(values_interval.length - 2)] = value;
-        values_interval[(values_interval.length - 1)] = different_value; 
+        values_interval[(values_interval.length - 2)] = parseInt(value);
+        values_interval[(values_interval.length - 1)] = parseInt(different_value); 
       }
 
      this.getJSON = function(fixer)
       {
+       // Format fixer for turn into a number
+       fixer = parseInt(fixer);
        // Get copy in JSON pair: element from values_interval list and points determined for the fixer
           let copy = {};
        /* Iterate over the list and get the difference point to start with a good correction and modify if this is copied to
