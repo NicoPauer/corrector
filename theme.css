@@ -12,6 +12,26 @@
   padding: 0 auto;
 }
 
+header
+{
+  font-family: 'sans-serif';
+  background: rgba(255, 95, 95, 0.3);
+  color: rgb(160, 160, 160);
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family: 'Arial';
+  font-size: 1.6em;
+}
+
+footer
+{
+  font-family: helvetico;
+  background: rgba(95, 95, 95, 1);
+  color: rgb(255, 200, 200);
+}
+
 img
 {
   width: 50%;
