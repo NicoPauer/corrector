@@ -28,6 +28,5 @@ var corrector = function(start, end)
           }
           return copy;
       } 
-    // Clear this for optimize and because isn't needed at this point of the execution
-      delete values_interval, start, end;
+ 
 };
