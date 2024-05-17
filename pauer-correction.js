@@ -4,7 +4,7 @@
 var corrector = function(start, end)
 {
     /* Init JSON for be a good start point */
-      let copy = {start:1, end:10};
+      let copy = {parseInt(start):1, parseInt(end):10};
     // Matize extremes values with intermediate values e.g: for 1 and -1 add zero.
       this.fixing = function (value, different_value)
       {
