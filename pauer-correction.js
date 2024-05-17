@@ -11,7 +11,7 @@ var corrector = function(start, end)
       this.fixing = function (value, different_value)
       {
         // Add values in the middle of the list
-        values_inertval[((values_interval.length - 1) / 2)] = value;
+        values_interval[((values_interval.length - 1) / 2)] = value;
         values_inertval[(((values_interval.length - 1) / 2) + 1)] = different_value; 
       }
 
@@ -28,5 +28,7 @@ var corrector = function(start, end)
           }
           return copy;
       } 
+    // Write this for optimize
+     delete values_interval, start, end;
  
 };
