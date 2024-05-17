@@ -14,5 +14,20 @@ var corrector = function(start, end)
         values_inertval[((values_interval.length - 1) / 2)] = value;
         values_inertval[(((values_interval.length - 1) / 2) + 1)] = different_value; 
       }
-      
+
+     this.getJSON = function(fixer)
+      {
+       // Get copy in JSON pair: element from values_interval list and points determined for the fixer
+          let copy = {};
+       /* Iterate over the list and get the difference point to start with a good correction and modify if this is copied to
+          an external JSON */
+          for (let value in values_interval)
+          {
+           // Squared correction
+            copy[value] = ((values_interval * (fixer ** 2)) + (values_interval * fixer) + values_interval.indexOf(value));
+          }
+          return copy;
+      } 
+    // Clear this for optimize and because isn't needed at this point of the execution
+      delete values_interval, start, end;
 };
