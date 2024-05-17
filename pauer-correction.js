@@ -3,37 +3,35 @@
 
 var corrector = function(start, end)
 {
-    /* list that have opposite values between extremes 
-        e.g [1, -1] or [1, -3, 3, -1]
-        */
-      let values_interval = [parseInt(start), parseInt(end)];
-      // Each call to the method fixing with the two new values improve precisition
+    /* Init JSON for be a good start point */
+      let copy = {start:1, end:10};
+    // Matize extremes values with intermediate values e.g: for 1 and -1 add zero.
       this.fixing = function (value, different_value)
       {
-        // Add values in the middle of the list
-        values_interval[(values_interval.length / 2)] = parseInt(value);
-       // Make auxiliar copy before replace secon middle value
-        values_interval[values_interval.length - 1] = values_interval[((values_interval.length / 2) + 1)];
-      // Replace second middle value 
-        values_interval[((values_interval.length / 2) + 1)] = parseInt(different_value); 
+        // Add values to JSON with the init value 5 only for create this like JSON and be predictible and so long predictible as be as possible
+        copy[value] = 5;
+        copy[different_value] = 5;
       }
 
-     this.getJSON = function(fixer)
+     this.aprox = function(value)
+     {
+        // Turn to start mid values the parameter
+         if (copy[value] >= 1)
+         { 
+           copy[value] -= 1;
+           this.aprox(value);
+         }
+         else
+         {
+           copy[value] = 5;
+         }
+     }
+ 
+     this.getJSON = function()
       {
-       // Format fixer for turn into a number
-       fixer = parseInt(fixer);
-       // Get copy in JSON pair: element from values_interval list and points determined for the fixer
-          let copy = {};
-       /* Iterate over the list and get the difference point to start with a good correction and modify if this is copied to
-          an external JSON */
-          for (let value in values_interval)
-          {
-           // Squared correction
-            copy[value] = ((values_interval.length * (fixer ** 2)) + (values_interval * fixer) + values_interval.indexOf(value));
-          }
+       // Get JSON to modify externally if would be necessary copying result of it to an external variable
           return copy;
-  
       } 
      // Optimize with this
-      delete values_interval, start, end;
+      delete copy, start, end;
 };
