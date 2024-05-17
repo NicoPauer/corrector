@@ -5,8 +5,8 @@ var corrector = function(min_corrector, max_corrector)
 {
     /* Init JSON for be a good start point */
       let copy = {
-                   min_corrector:1, 
-                   max_corrector:10
+                   1:1, 
+                   10:10
                  };
     // Matize extremes values with intermediate values e.g: for 1 and -1 add zero.
       this.fixing = function (value, different_value)
