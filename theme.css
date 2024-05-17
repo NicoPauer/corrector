@@ -34,6 +34,9 @@ h1, h2, h3, h4, h5, h6
 
 footer
 {
+  margin: 1.5%;
+  padding: 0.4%;
+  border-radius: 0.15em;
   font-family: 'Helvetica';
   background: rgba(65, 65, 65, 1);
   color: rgb(235, 200, 200);
