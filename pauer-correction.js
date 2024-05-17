@@ -23,7 +23,7 @@ var corrector = function(start, end)
          }
          else
          {
-           copy[value] = 5;
+           copy[value] = 3;
          }
      }
  
