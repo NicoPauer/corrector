@@ -36,5 +36,5 @@ var corrector = function(min_corrector, max_corrector)
           return copy;
       }; 
      // Optimize with this
-      delete copy, start, end;
+      delete copy, min_corrector, max_corrector;
 };
