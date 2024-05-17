@@ -1,7 +1,7 @@
 /* Library for correction using mediation between extremes © 2024 NicoPauer
  Object to encapsule the corrector logic and data for security reasons */
 
-var corrector = function(min, max)
+var corrector = function(min_corrector, max_corrector)
 {
     /* Init JSON for be a good start point */
       let copy = {min_corrector:1, max_corrector:10};
