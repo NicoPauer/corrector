@@ -39,7 +39,7 @@ function convertHex(integerNumber)
   
   while (quotient != 0)
   {
-      digit.push(dict[(integerNumber % quotient)]);
+      digits.push(dict[(integerNumber % quotient)]);
       quotient = (integerNumber / quotient);
   }
  // Copy from digits list in revers order to convertion result
