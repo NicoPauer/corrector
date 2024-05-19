@@ -17,11 +17,13 @@ function difRGB(first, second)
    return result;
 }
 
-function getColors(pickers)
+function getColors()
 {
     // Get color from color picker input list and return a list with a sub-list with decimal values for red, green and blue
     let colors = [];
-
+   // Better select Color Picker from here because this are having color as the property of color picker not like color picker itself
+    let pickers = document.querySelectorAll('input[type="color"]');
+   
     for (let color in pickers)
     {
        // Format color in [R, G, B] code style
