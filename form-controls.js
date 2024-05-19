@@ -22,12 +22,12 @@ function getColors(pickers)
     // Get color from color picker input list and return a list with a sub-list with decimal values for red, green and blue
     let colors = [];
 
-    for (var color in pickers)
+    for (let color in pickers)
     {
        // Format color in [R, G, B] code style
        
-        color = color.value.replace("#", "");
-
+        //color = color.value.replace("#", "");
+         console.log(color);
         let colorArrayCode = []
        // Each to characters of color turn into decimal value and add it to colorArrayCode
         for (let index = 0; index < 6; index++)
