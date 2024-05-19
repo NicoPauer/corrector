@@ -8,7 +8,7 @@ function difRGB(first, second)
    
    let result = [];
 
-   for (let index = 0; index < 3; index++)
+   for (let index = 0; index < 2; index++)
    {
        // Add difference between each array component
          result.push(first[index] - second[index]);
