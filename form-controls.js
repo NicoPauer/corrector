@@ -8,7 +8,7 @@ function difRGB(first, second)
    
    let result = [];
 
-   for (let index = 0; index < 2; index++)
+   for (let index = 0; index < 3; index++)
    {
        // Add difference between each array component
          result.push(first[index] - second[index]);
@@ -24,7 +24,7 @@ function getColor(picker)
   // List to pass in [R, G, B] format   
     let colorArrayCode = []
  // Each to characters of color turn into decimal value and add it to colorArrayCode
-    for (let index = 0; index < 3; index++)
+    for (let index = 0; index < 2; index++)
     {
          if ((index % 2) == 0)
          {   
