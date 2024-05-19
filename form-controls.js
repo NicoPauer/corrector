@@ -17,37 +17,23 @@ function difRGB(first, second)
    return result;
 }
 
-function getColors()
+function getColor(picker)
 {
-    // Get color from color picker input list and return a list with a sub-list with decimal values for red, green and blue
-    let colors = [];
-   // Better select Color Picker from here because this are having color as the property of color picker not like color picker itself
-   
-    let pickers = document.querySelectorAll('input[type="color"]');
-   
-    let attempt = 0; 
-   
-    for (let color = pickers[attempt]; attempt < pickers.length; attempt++)
+   // Get color from color picker passed as parameter and return a 3-items list with decimal values for red, green and blue
+    let color = picker.value.replace("#", "");
+  // List to pass in [R, G, B] format   
+    let colorArrayCode = []
+ // Each to characters of color turn into decimal value and add it to colorArrayCode
+    for (let index = 0; index < 6; index++)
     {
-       // Format color in [R, G, B] code style
-       
-        color = color.value.replace("#", "");
-       
-        let colorArrayCode = []
-       // Each to characters of color turn into decimal value and add it to colorArrayCode
-        for (let index = 0; index < 6; index++)
-        {
-           if ((index % 2) == 0)
-           {   
-              colorArrayCode.push(parseInt(color[index], 16));
-              colorArrayCode.push(parseInt(color[index + 1], 16));
-           }      
+         if ((index % 2) == 0)
+         {   
+           colorArrayCode.push(parseInt(color[index], 16));
+           colorArrayCode.push(parseInt(color[index + 1], 16));
         }
-       // Add color to the list
-        colors.push(colorArrayCode);
     }
-
-    return colors;
+   
+    return colorArrayCode;
 }
 
 function complementary(rgbCode)
@@ -71,4 +57,4 @@ function complementary(rgbCode)
     return code;
 }
 
-// Graphical interface logic
+// Graphical interface logic is on the html file for have more control and can access to all the properties of a good waay
