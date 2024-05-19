@@ -22,7 +22,7 @@ function getColors(pickers)
     // Get color from color picker input list and return a list with a sub-list with decimal values for red, green and blue
     let colors = [];
 
-    for (let color in pickers)
+    for (var color in pickers)
     {
        // Format color in [R, G, B] code style
        
