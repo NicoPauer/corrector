@@ -30,7 +30,7 @@ function getColors(pickers)
 
         let colorArrayCode = []
        // Each to characters of color turn into decimal value and add it to colorArrayCode
-        for (let index = 0; index < (color.length - 1); index++)
+        for (let index = 0; index < 6; index++)
         {
            if ((index % 2) == 0)
            {   
