@@ -24,7 +24,7 @@ function getColor(picker)
   // List to pass in [R, G, B] format   
     let colorArrayCode = []
  // Each to characters of color turn into decimal value and add it to colorArrayCode
-    for (let index = 0; index < 6; index++)
+    for (let index = 0; index < 3; index++)
     {
          if ((index % 2) == 0)
          {   
