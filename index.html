@@ -58,7 +58,9 @@
             }
         }  
         // Update in each second
-        setInterval(1000, updating());
+        setInterval(updating(), 1000);
+        // Add Events
+        document.querySelector("button").onclick = "addPickers();";
       </script>
     </body>
   </html>
