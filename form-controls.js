@@ -2,6 +2,34 @@
 
 // Abstract logic
 
+function digitHex(digit)
+{
+
+   result = digit.toString();
+   
+   switch (digit)
+   {
+      case 10: result = 'a'; break;    
+      case 11: result = 'b'; break;    
+      case 12: result = 'c'; break;    
+      case 13: result = 'd'; break;    
+      case 14: result = 'e'; break;    
+      case 15: result = 'f'; break;   
+      default: result = digit.toString();
+   }
+   
+   return result;
+   
+}
+
+function convertHex(list)
+{
+   // Turn into hex code [R, G, B] list
+   let code = (digitHex(list[0] % 16) + digitHex(list[1] % 16) + digitHex(list[2] % 16));
+   
+   return "#" + code;
+}
+
 function difRGB(first, second)
 {
    // Make the difference between two 3-items arrays of integers with values of RGB colors channels
