@@ -23,16 +23,12 @@ function getColor(picker)
     let color = picker.value.replace("#", "");
   // List to pass in [R, G, B] format   
     let colorArrayCode = []
- // Each to characters of color turn into decimal value and add it to colorArrayCode
-    for (let index = 0; index < 2; index++)
-    {
-         if ((index % 2) == 0)
-         {   
-           colorArrayCode.push(parseInt(color[index], 16));
-           colorArrayCode.push(parseInt(color[index + 1], 16));
-        }
-    }
+ // Each to characters of the six of color turn into decimal value and add it to colorArrayCode
    
+    colorArrayCode.push(parseInt(color[0] + color[1], 16));
+    colorArrayCode.push(parseInt(color[2] + color[3], 16));
+    colorArrayCode.push(parseInt(color[4] + color[6], 16));
+    
     return colorArrayCode;
 }
 
