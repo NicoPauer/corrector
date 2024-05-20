@@ -2,30 +2,11 @@
 
 // Abstract logic
 
-function digitHex(digit)
-{
-
-   result = digit.toString();
-   
-   switch (digit)
-   {
-      case 10: result = 'a'; break;    
-      case 11: result = 'b'; break;    
-      case 12: result = 'c'; break;    
-      case 13: result = 'd'; break;    
-      case 14: result = 'e'; break;    
-      case 15: result = 'f'; break;   
-      default: result = digit.toString();
-   }
-   
-   return result;
-   
-}
 
 function convertHex(list)
 {
    // Turn into hex code [R, G, B] list
-   let code = (digitHex(list[0] % 16) + digitHex(list[1] % 16) + digitHex(list[2] % 16));
+   let code = (list[0].toString(16).padStart(2, '0') + list[1].toString(16).padStart(2, '0') + list[2].toString(16).padStart(2, '0'));
    
    return "#" + code;
 }
