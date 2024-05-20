@@ -12,7 +12,16 @@
       <link rel = "stylesheet" href = "theme.css" />
     </head>
     <body>
-      <script type = "text/javascript">
+      <article id = "image-corrector" title = "Input data and change image colors for fix it">
+        <header>Values pairs for giving colors to the image</header>
+        <section id = "interface" title = "Graphical Interface">
+          <img id = "image" alt = "image to paint" title = "correction use colors pairs" src = "color-sensitive-image.png"/>
+          <form id = "controls" title = "buttons and data entry">
+            <input title = "Start color" type = "color" />
+            <button title = "Add a new pair">+</button>
+            <input title = "End color" type = "color" />
+          </form> 
+           <script type = "text/javascript">
         // Write this here because externaally I can't access to all the web Graphical Interface
         // Functions
         function updatePickers(first, second)
@@ -43,15 +52,6 @@
         // Add Events
         document.querySelector("button").addEventListener('click', addPickers());
       </script>
-      <article id = "image-corrector" title = "Input data and change image colors for fix it">
-        <header>Values pairs for giving colors to the image</header>
-        <section id = "interface" title = "Graphical Interface">
-          <img id = "image" alt = "image to paint" title = "correction use colors pairs" src = "color-sensitive-image.png"/>
-          <form id = "controls" title = "buttons and data entry">
-            <input title = "Start color" type = "color" />
-            <button title = "Add a new pair">+</button>
-            <input title = "End color" type = "color" />
-          </form>  
         </section>
         <footer title = "about the developer">
           <h1>About</h1>
