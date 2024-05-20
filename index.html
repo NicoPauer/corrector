@@ -31,5 +31,34 @@
           </nav>  
         </footer>
       </article> 
+      <script type = "text/javascript">
+        // Write this here because externaally I can't access to all the web Graphical Interface
+        // Functions
+        function updatePickers(first, second)
+        {
+            // Turn into the complementary color of first to color value of the second
+            second.value = complementary(first.value);
+        }
+
+        function addPickers()
+        {
+          // Add a picker before and after of button (the unique in this web)
+          document.querySelector("button::before").innerHTML += "<input type = 'color' title = 'Mid values' />";
+          document.querySelector("button::after").innerHTML += "<input type = 'color' title = 'Mid values' />";
+        }
+
+        function updating()
+        {
+            let pickers = document.querySelectorAll("input[type='color']");
+       
+            for (let index = 0; index < (pickers.length - 2); index++)
+            {
+             // Preparation 
+              updatePickers(pickers[index], pickers[index + 1]);
+            }
+        }  
+        // Update in each second
+        setInterval(1000, updating());
+      </script>
     </body>
   </html>
