@@ -28,7 +28,7 @@ function difRGB(first, second)
 
 function getColor(picker)
 {
-   // Get color from color picker passed as parameter and return a 3-items list with decimal values for red, green and blue
+   // Get color from color picker passed as parameter and return a 3-items [R, G, B] list with decimal values for red, green and blue
     let color = picker.value.replace("#", "");
   // List to pass in [R, G, B] format   
     let colorArrayCode = []
@@ -43,7 +43,7 @@ function getColor(picker)
 
 function complementary(rgbCode)
 {
-    // Return [R, G, B] color codes list of the complementary color passed as parameter in same formar
+    // Return hex code of the complementary color [R, G, B] passed as parameter in same formar
       let code = [255, 255, 255];
     /* 
     
@@ -59,7 +59,7 @@ function complementary(rgbCode)
   
     code = difRGB(code, rgbCode);
   
-    return code;
+    return convertHex(code);
 }
 
 // Graphical interface logic is on the html file for have more control and can access to all the properties of a good waay
