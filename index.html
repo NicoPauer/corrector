@@ -33,8 +33,8 @@
         function addPickers()
         {
           // Add a picker before and after of button (the unique in this web)
-          document.querySelector("button::before").innerHTML += "<input type = 'color' title = 'Mid values' />";
-          document.querySelector("button::after").innerHTML += "<input type = 'color' title = 'Mid values' />";
+          document.querySelectorAll("button::before")[0].innerHTML += "<input type = 'color' title = 'Mid values' />";
+          document.querySelectorAll("button::after")[1].innerHTML += "<input type = 'color' title = 'Mid values' />";
         }
 
         function updating()
@@ -50,7 +50,7 @@
         // Update in each second
         setInterval(updating(), 1000);
         // Add Events
-        document.querySelector("button").addEventListener('click', addPickers());
+        document.querySelectorAll("button")[0].addEventListener('click', addPickers());
       </script>
         </section>
         <footer title = "about the developer">
